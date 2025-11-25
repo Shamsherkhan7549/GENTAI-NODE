@@ -1,7 +1,6 @@
 
 # 📌 MERN Project — Local Chat App using Groq SDK (Minor Project)
     This is a minor MERN project that demonstrates how to build a simple AI Chat Application using:
-    MongoDB
     Express.js
     React.js
     Node.js
@@ -22,7 +21,7 @@
     | Frontend | React + Axios                       |
     | Backend  | Node.js, Express.js                 |
     | AI Model | Groq SDK (LLaMA 3.1)                |
-    | Database | MongoDB (optional for saving chats) |
+
 
 #    project/
     ├── backend/
