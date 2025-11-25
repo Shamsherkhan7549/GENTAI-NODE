@@ -66,9 +66,6 @@ app.post('/chat', async (req, res) => {
 
         context.push({ role: "assistant", content: completion.choices[0].message.content })
 
-        console.log(completion.choices[0].message.content);
-
-
         return res.json({ success: true, answer: context });
 
     } catch (error) {
