@@ -23,26 +23,26 @@ const model = "gpt-4o-mini";
 
 app.post("/chat", async (req, res) => {
     try {
-        const {message} = req.body;
-        
-        if(!message) return res.json({success:false, message:"Please ask something"})
-            
+        const { message } = req.body;
+
+        if (!message) return res.json({ success: false, message: "Please ask something" })
+
         const response = await client.responses.create({
             model,
-            
-            input:[
+
+            input: [
                 {
-                    role:"system",
-                    content:"write only in bisfi context only in hinglish"
+                    role: "system",
+                    content: "write only in bisfi context only in hinglish"
                 },
                 {
-                    role:"user",
-                    content:message
+                    role: "user",
+                    content: message
                 }
             ]
         });
 
-        return res.json({success:true, message:response.output_text});
+        return res.json({ success: true, message: response.output_text });
 
 
         // const completion = await client.chat.completions.create({
@@ -59,10 +59,35 @@ app.post("/chat", async (req, res) => {
         // return res.json({success:true, answer:completion.choices[0].message.content});
 
     } catch (error) {
-        return res.json({success:false, message:error.message})
+        return res.json({ success: false, message: error.message })
     }
 })
 
+
+app.post("/image", async (req, res) => {
+    try {
+        const { prompt } = req.body;
+        
+        if (!prompt) return res.json({ success: false, message: "Please provide prompt" })
+
+        const response = await client.images.generate({
+            model: "dall-e-2",
+            prompt,
+            size: "512x512",
+            response_format: "b64_json",
+            n: 1
+        });
+
+        console.log(response);
+        
+        // return res.json({ success: true, data: response.data });
+
+    } catch (error) {
+        console.log(error.message);
+        
+        return res.json({ success: false, message: error.message })
+    }
+});
 
 
 app.listen(port, () => {
