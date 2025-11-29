@@ -1,36 +1,30 @@
-const { json } = require('stream/consumers');
 const readFile = require('./index.js');
 const { readFileSync } = require('fs')
 
-
-function dotPro(a, b) {
-
-}
-
-
-
 async function similarities() {
-
     const embededAnimal = await readFile();
-
     let allEmbededData = readFileSync("embededData.json")
     allEmbededData = JSON.parse(allEmbededData)
 
-    let result = allEmbededData.map((items, index) => {
+    let result = allEmbededData.map((items) => {
 
         let innerResult = items.embeddings.map((item, index) => {
-            return item * embededAnimal[index]
-        }).reduce((ele, acc) => ele + acc, 0)
+            return item * embededAnimal[index];
+        }).reduce((ele, acc) => ele + acc, 0);
 
-        return innerResult
-
+        return {
+            input:items.input,
+            value: innerResult
+        }
     });
 
+    // let similarity = result.sort((a,b)=> b.value - a.value)
     console.log(result);
     
     return result
 }
 
- similarities()
+similarities()
+ 
 
 
