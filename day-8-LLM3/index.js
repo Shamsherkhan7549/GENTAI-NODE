@@ -35,12 +35,14 @@ function generateJsonFile(embededData, jsonFile){
 
     const embededData = await generateEmbedding(dataArray);
 
-    generateJsonFile(embededData, 'embededData.json');
+    generateJsonFile(embededData, 'embededData.json');    
 
     const animalEmbedding =  await generateEmbedding("animal");
     
     return animalEmbedding[0].values
 }
+
+// readFile()
 
 module.exports = readFile;
 

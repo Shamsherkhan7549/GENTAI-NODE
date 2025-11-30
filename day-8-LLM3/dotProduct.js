@@ -18,10 +18,9 @@ async function similarities() {
         }
     });
 
-    // let similarity = result.sort((a,b)=> b.value - a.value)
-    console.log(result);
+    result.sort((a,b)=> b.value - a.value)
+    console.log(result);     
     
-    return result
 }
 
 similarities()
