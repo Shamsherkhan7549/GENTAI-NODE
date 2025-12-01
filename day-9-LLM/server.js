@@ -22,23 +22,39 @@ const chromaClient = new CloudClient({
     database:process.env.CHROMA_DATABASE
 });
 
-async function connectChroma(){
-    const noun = "pegion"
-    const id = "3"
+async function connectChroma(id, noun){
+   
    const embededData = await createEmbedding(noun);
 
-   const chromaConnectioinRes =  await chromaClient.getOrCreateCollection({
+   const chromaConnectionRes =  await chromaClient.getOrCreateCollection({
         name:"birds"
     });
     
-    chromaConnectioinRes.add({
+    chromaConnectionRes.add({
         ids:[id],
         documents:[noun],
         embeddings:[embededData]
     })
     
-    console.log("collection name = ", chromaConnectioinRes._name);
+    console.log("collection name = ", chromaConnectionRes._name);    
     
 }
 
-connectChroma();
+// connectChroma("4", "cat");
+
+async function searchQuery(query) {
+    const embeddingForSearch = await createEmbedding(query);
+
+    const collection = await chromaClient.getCollection({
+        name: "birds"
+    })
+
+    const result = await collection.query({
+        queryEmbeddings:[embeddingForSearch],
+        nResults:1
+    })
+
+    console.log("resutlt: ", result);
+}
+ searchQuery("give me animal name")
+
