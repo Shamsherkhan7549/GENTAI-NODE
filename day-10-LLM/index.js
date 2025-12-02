@@ -65,4 +65,22 @@ async function run() {
     log(result);
 }
 
-run();
+// run();
+
+async function searchQuery(questions) {
+    const collection = await getCollection();
+    const queryEmbedding = await generateEmbedding(questions);
+
+    const searchResults = await collection.query({
+        queryEmbeddings:[queryEmbedding],
+        nResults:1
+    })
+
+    // log(searchResults)
+     console.log("🔍 Query:", questions);
+  console.log("📄 Top Documents:", searchResults.documents);
+  console.log("📂 Document IDs:", searchResults.ids);
+  console.log("📏 Distances:", searchResults.distances);
+}
+
+searchQuery("which skills shamsher knows?")
