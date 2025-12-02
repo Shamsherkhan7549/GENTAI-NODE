@@ -1,0 +1,50 @@
+Shamsher Khan
+7549766215
+shamsher.khan7515@gmail.com
+shamsherkhan7549.github.io
+Technical Skills
+Experience/Projects
+Certificates
+Languages and DataBases: HTML, CSS, JavaScript, Java, SQL, MongoDB 
+Libraries & Frameworks: ReactJS, Redux, Bootstrap, Tailwind CSS, Node.js, Express.js, RESTful API
+Other Skills: Figma , Word, Excel and PowerPoint , Git, Github
+
+Education
+
+Ram Krishna Dharmarh Foundation University 
+Bachelor of Engineering in Computer Science
+Jun 2021 – May2025
+Bhopal, MP
+
+2. Full Stack Web Development
+july 2024 - Sep 2024
+
+        Completed a Full Stack Web Development internship, where I gained hands-on experience in building and
+        deploying web applications. Worked on front-end and back-end development, focusing on creating 
+        responsive designs, managing databases, and implementing APIs to deliver a seamless user experience
+
+
+3. English speaking Course
+Aug 2023 - Aug 2024
+       Completed a one-year English-speaking course at Freedom Employability Academy, enhancing communication
+        skills.
+
+E-Commerce Web Application
+Mar 2025 – Apr 2025
+Built and deployed a full-stack eCommerce web application using MongoDB, Express.js, React.js, Node.js (MERN), and Tailwind CSS, featuring dynamic product listings, cart functionality, and responsive design.
+Implemented user authentication and authorization using JWT (JSON Web Tokens), enabling secure login, protected routes, and role-based access control.
+Implemented RESTful APIs and responsive UI for seamless user experience across devices, including product filtering, cart management, and user registration/login features.
+
+
+Dec 2024 – Jan 2025
+Room Rental Web
+Implemented MongoDB for data storage, successfully handling over 100+ room listings with efficient querying for availability and sorting.
+Built 4 RESTful API endpoints with Express and Node.js, ensuring smooth communication between the frontend and backend and enabling real-time data handling.
+Implemented user authentication and authorization using passport, enabling secure login, protected routes, and role-based access control.
+linkedin/in/Shamsher_Khan
+
+Recipes Web
+Developed a responsive recipe web app using React.js and Bootstrap, allowing users to browse and view detailed cooking instructions with a clean and intuitive UI.
+Managed global application state efficiently using React Context API, enabling seamless data sharing across components without prop drilling.
+Deployed the project on Netlify and used Git/GitHub for version control to maintain codebase and enable continuous deployment
+Oct-2024 – Nov 2024
