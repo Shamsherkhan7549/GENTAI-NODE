@@ -115,6 +115,18 @@
   box-shadow: 0 6px 18px rgba(16,163,127,0.12);
 }
 
+.source-id{
+  color: red;
+  font-weight: 700;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.source-text{
+  color: #0b1226;
+  font-weight: 500;
+}
+
 /* small-screen adjustments */
 @media (max-width:640px){
   .messages{ height: calc(100vh - 180px); padding: 0.75rem; }
@@ -122,3 +134,4 @@
   .add-btn, .send-btn{ width:44px; height:44px; }
   .input-height{ height:44px; font-size:13px; }
 }
+
